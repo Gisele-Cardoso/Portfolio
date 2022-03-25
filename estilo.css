@@ -38,6 +38,12 @@ body::-webkit-scrollbar-thumb{
     -webkit-text-fill-color: transparent;
 }
 
+@media screen and (max-width: 800px){
+    .titulo{
+        padding-top: 60px;
+    }
+}
+
 .menu{
     display: flex;
     justify-content: space-between;
@@ -71,6 +77,50 @@ body::-webkit-scrollbar-thumb{
     font-size: 14px;
 }
 
+.menu-icone{
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #fff;
+    display: none;
+}
+
+@media screen and (max-width: 800px){
+    .menu-icone{
+        display: block;
+    }
+    .menu-link{
+        width: 55%;
+        height: calc(100% - 50px);
+        background-color: rgb(27, 26, 26);
+        position: absolute;
+        top: 70px;
+        right: -100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 200ms ease-out;
+    }
+    .menu-link.active{
+        right: 0;
+    }
+    .menu-link a{
+        font-size: 1.3rem;
+    }
+    .menu-item:hover{
+        position: relative;
+    }
+    
+    .menu-item:hover::after{
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 0.10rem;
+        left: 0;
+        top: 2rem;
+        background: blue;
+    }
+}
+
 .linha{
     width: 100%;
     box-shadow: 3px 3px 3px 3px rgba(34, 55, 177, 0.884);
@@ -81,6 +131,7 @@ body::-webkit-scrollbar-thumb{
     justify-content: space-around;
     align-items: center;
 }
+
 
 .home-texto h1{
     font-size: 18px;
@@ -97,6 +148,7 @@ body::-webkit-scrollbar-thumb{
     font-weight: 500;
 }
 
+
 .button{
     border: none;
     border-radius: 5px;
@@ -110,6 +162,7 @@ body::-webkit-scrollbar-thumb{
     background: rgb(36, 53, 148);
 }
 
+
 .about{
     display: flex;
     justify-content: space-around;
@@ -122,6 +175,17 @@ body::-webkit-scrollbar-thumb{
     font-weight: normal;
     font-size: 18px;
 }
+
+@media screen and (max-width: 800px){
+    .about{
+        flex-direction: column;
+    }
+    .about-texto{
+        font-size: 0.8rem;
+    }
+}
+
+/* SKILLS */
 
 .skills-row {
     display: grid;
@@ -164,6 +228,24 @@ body::-webkit-scrollbar-thumb{
     border-left: 3px solid #120a7c;
 }
 
+@media screen and (max-width: 800px){
+    .skills-row{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+    .card{
+        width: 250px;
+        height: 150px;
+    }
+    .skill-title{
+        font-size: 1.2rem;
+    }
+    .card p{
+        font-size: 2rem;
+    }
+}
+
 .projeto{
     display: flex;
     justify-content: space-around;
@@ -185,6 +267,12 @@ body::-webkit-scrollbar-thumb{
     cursor: pointer;
 }
 
+@media screen and (max-width: 800px){
+    .projeto{
+        align-items: center;
+    }
+}
+
 
 .contato{
     display: flex;
@@ -192,7 +280,4 @@ body::-webkit-scrollbar-thumb{
     align-items: center;
 }
 
-.icones, .elementor-button-icon, i:before{
-    font-size: 30px;
-    vertical-align: middle;
-}
+
