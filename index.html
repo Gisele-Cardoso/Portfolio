@@ -9,51 +9,61 @@
 
         <!--Icones-->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        
 </head>
 <body>
 
-    <header>
-        <div class="menu">
-            <div class="menu-logo">
-                <img src="./img/logowhite.svg" alt="">
-            </div>
-
-            <nav>
-                <ul class="menu-link">
-                    <li><a href="#" class="menu-item active">home</a></li>
-                    <li><a href="#" class="menu-item">quem sou</a></li>
-                    <li><a href="#" class="menu-item">skills</a></li>
-                    <li><a href="#" class="menu-item">projetos</a></li>
-                    <li><a href="#" class="menu-item">contato</a></li>
-                </ul>
-            </nav>
-
-            <div class="menu-icone"><i class='bx bx-menu'></i></div>
-        </div>
+    <header id="header">
+        <a id="logo" href="#">Gisele <span>Cardoso</span></a>
+        <nav id="nav">
+          <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+            <span id="hamburger"></span>
+          </button>
+          <ul id="menu" role="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#sobre">Quem sou</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
     </header>
+
+    
 
     <!--CONTEÚDO-->
     <main>
         <!--HOME-->
-        <section>
+        <section id="home">
             <div class="linha"></div>
             
             <div class="home">
                 <div class="home-img">
-                    <img src="./img/home.png" alt="Avatar da Gisele" width="350px">
+                    <img class="home-img" src="./img/home.png" alt="Avatar da Gisele" width="350px">
                 </div>
 
                 <div class="home-texto ">
-                    <h1>Olá! Eu sou a Gisele,<br> <span class="typing-animation">Desenvolvedora Front-end.</span></h1>
+                    <h1>Olá! Eu sou a Gisele,<br> <span class="typing-animation">Desenvolvedora<br> Front-end.</span></h1>
 
                     <button class="button">Contato</button>
-                </div>                
+
+                <div class="icones-home">
+                    <a href="https://www.linkedin.com/in/gisele-cardoso-264972156/"  class="icones"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/Gisele-Cardoso"  class="icones"><i class='bx bxl-github'></i></a>
+                    <a href="https://contate.me/giselecardoso"  class="icones"><i class='bx bxl-whatsapp'></i></a>
+                </div>
+                </div>             
+
+                
             </div>
             
         </section>
 
             <!--QUEM SOU-->
-        <section class="linha-conteudo">
+        <section class="linha-conteudo" id="sobre">
             <h2 class="titulo">Quem sou</h2>
             <div class="about">
                 <div class="about-texto">
@@ -66,7 +76,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="skills">
             <h2 class="titulo">Skills</h2>
             
             <div class="skills">
@@ -111,7 +121,7 @@
         </section>
 
             <!--PROJETOS-->
-        <section>
+        <section id="projetos">
             <h2 class="titulo">Projetos</h2>
             <div class="projeto">
                 <div class="projeto-img">
@@ -128,29 +138,50 @@
             </div>
         </section>
 
-        <section>
-            <h2 class="titulo">Contato</h2>
-            <div class="contato">
-                <div class="contato-img">
-                    <img src="./img/contact.png" alt="" width="370px">
-                </div>
 
-                <div class="contato-icones">
-                    <p>Para mais informações, entre em contato!</p>
-
-                    <form action=""></form>
-                    
-                <div class="icones-conj">
-                    <a href="" class="icones"><i class='bx bxl-whatsapp'></i></a>
-                    <a href=""  class="icones"><i class='bx bxl-linkedin'></i></a>
-                    <a href=""  class="icones"><i class='bx bxl-github'></i></a>
-                    <a href=""  class="icones"><i class='bx bxl-instagram'></i></a>
-                </div>
-                </div>
+        <!--CONTATO-->
+        <section id="contato">
+          <h2 class="titulo">Contato</h2>
+          <div class="contato">
+            <div class="contato-img">
+              <img src="./img/contact.png" alt="" width="370px">
             </div>
+
+            <form action="https://api.web3forms.com/submit" method="POST">
+
+      <input type="hidden" name="access_key" value="8250e428-1cd3-4235-aab2-86e81cc86b44">
+  
+      <div class="form-div">
+        <label for="name">Nome</label>
+        <input type="text" name="name" required placeholder="Digite seu nome">
+      </div>
+
+      <div class="form-div">
+        <label for="email">Email</label>
+        <input type="email" name="email" required placeholder="Digite seu email">
+      </div>
+
+      <div class="form-div">
+        <label for="message">Mensagem</label>
+        <textarea name="message" required placeholder="Escreva sua mensagem"></textarea>
+        <input type="hidden" name="redirect" value="https://web3forms.com/success">
+      </div>
+
+      <button type="submit">Enviar</button>
+
+  
+  </form>
+                
+        </div>
         </section>
     </main>
 
+    <footer>
+        <p>© 2022 - Gisele Cardoso</p>
+    </footer>
+
+    <!--Scroll-->
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="script.js"></script>
     
 </body>

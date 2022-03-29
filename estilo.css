@@ -1,130 +1,166 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600&display=swap');
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background: #000;
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
     list-style: none;
-    color: #fff;
+    color: #000;
 }
-
-body::-webkit-scrollbar{
-    width: 12px;
-}
-
-body::-webkit-scrollbar-track{
-    background: #000;
-}
-
-body::-webkit-scrollbar-thumb{
-    background-color: #150d6e;
-    border-radius: 5px;
-    border: 2px solid rgb(9, 1, 43);
-}
-
 
 .titulo{
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: 600;
     text-align: center;
     padding-top: 8px;
     margin-bottom: 30px;
-    background: linear-gradient(to right, rgb(83, 65, 187) 25%, rgb(41, 39, 148) 75%);
+    background: linear-gradient(to right, rgb(38, 22, 133) 25%, rgb(11, 10, 94) 75%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-@media screen and (max-width: 800px){
-    .titulo{
-        padding-top: 60px;
-    }
-}
-
-.menu{
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 30px;
-    align-items: center;
-}
-
-.menu-link{
-    position: relative;
-    display: flex;
-    gap: 20px;
-}
-
-.menu-item:hover{
-    position: relative;
-}
-
-.menu-item:hover::after{
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 0.10rem;
-    left: 0;
-    top: 1.5rem;
-    background: blue;
-}
-
-.menu-item{
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 14px;
-}
-
-.menu-icone{
-    font-size: 1.2rem;
+a {
+    font-family: 'Poppins';
+    font-weight: 500;
     cursor: pointer;
-    color: #fff;
-    display: none;
-}
+  }
+  
+  ul{
+    display: flex;
+    cursor: pointer;
+  }
+  
+  li a:hover{
+    color: #746dd8;
+  }
+  
+  
+  #logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Dosis';
+    background: linear-gradient(to right, rgb(30, 15, 119) 25%, rgb(9, 7, 100) 75%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
-@media screen and (max-width: 800px){
-    .menu-icone{
-        display: block;
+  span{
+      font-family: 'Dosis';
+      color: #2f26a5;
+  }
+  
+  #header {
+    box-sizing: border-box;
+    height: 70px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+  }
+  
+  #menu {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+  }
+  
+  #menu a {
+    font-size: 1rem;
+    display: block;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+
+  #menu a:hover{
+    color: #1916be;
+  }
+  
+  #btn-mobile {
+    display: none;
+  }
+  
+  @media (max-width: 800px) {
+    #menu {
+      display: block;
+      position: absolute;
+      width: 270px;
+      top: 70px;
+      right: 0px;
+      background: rgb(207, 205, 205);
+      transition: 0.6s;
+      z-index: 1000;
+      visibility: hidden;
+      overflow-y: hidden;
+      border-radius: 0px 0px 10px 10px;
     }
-    .menu-link{
-        width: 55%;
-        height: calc(100% - 50px);
-        background-color: rgb(27, 26, 26);
-        position: absolute;
-        top: 70px;
-        right: -100%;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transition: all 200ms ease-out;
+    #nav.active #menu {
+      height: 300px;
+      visibility: visible;
+      overflow-y: auto;
     }
-    .menu-link.active{
-        right: 0;
+    #menu a {
+      padding: 1rem 0;
+      margin: 0 1rem;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.02);
+      font-family: 'Poppins';
+      font-weight: 500;
     }
-    .menu-link a{
-        font-size: 1.3rem;
+    #menu a:hover {
+        color: #1916be;
     }
-    .menu-item:hover{
-        position: relative;
+    #btn-mobile {
+      display: flex;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border: none;
+      background: none;
+      cursor: pointer;
+      gap: 0.5rem;
     }
-    
-    .menu-item:hover::after{
-        position: absolute;
-        content: '';
-        width: 100%;
-        height: 0.10rem;
-        left: 0;
-        top: 2rem;
-        background: blue;
+    #hamburger {
+      border-top: 2px solid;
+      width: 20px;
     }
-}
+    #hamburger::after,
+    #hamburger::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: currentColor;
+      margin-top: 5px;
+      transition: 0.2s;
+      position: relative;
+    }
+    #nav.active #hamburger {
+      border-top-color: transparent;
+    }
+    #nav.active #hamburger::before {
+      transform: rotate(135deg);
+    }
+    #nav.active #hamburger::after {
+      transform: rotate(-135deg);
+      top: -7px;
+    }
+    li:hover::after{
+        display: none;
+    }
+  }
+
 
 .linha{
     width: 100%;
-    box-shadow: 3px 3px 3px 3px rgba(34, 55, 177, 0.884);
+    border: 1px solid rgb(207, 205, 205);
 }
+
+/*HOME*/
 
 .home{
     display: flex;
@@ -132,22 +168,20 @@ body::-webkit-scrollbar-thumb{
     align-items: center;
 }
 
-
 .home-texto h1{
-    font-size: 18px;
-    font-weight: normal;
+    font-size: 1.3rem;
+    font-weight: 400;
     padding-bottom: 30px;
 }
 
 .home-texto span{
-    background: linear-gradient(to right, rgb(46, 28, 148) 25%, rgb(9, 7, 100) 75%);
+    background: linear-gradient(to right, rgb(30, 15, 119) 25%, rgb(9, 7, 100) 75%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 36px;
-    font-weight: 500;
+    font-size: 4rem;
+    font-weight: 600;
 }
-
 
 .button{
     border: none;
@@ -156,11 +190,26 @@ body::-webkit-scrollbar-thumb{
     width: 90px;
     height: 40px;
     cursor: pointer;
+    color: #fff;
 }
 
 .button:hover{
     background: rgb(36, 53, 148);
 }
+
+.icones-home{
+    flex-direction: column;
+    padding-top: 60px;
+    font-size: 1.3rem;
+}
+
+@media screen and (max-width: 800px){
+    .home-texto span{
+        font-size: 2rem;
+    }
+}
+
+
 
 
 .about{
@@ -172,8 +221,8 @@ body::-webkit-scrollbar-thumb{
 
 .about-texto{
     width: 700px;
-    font-weight: normal;
-    font-size: 18px;
+    font-weight: 500;
+    font-size: 0.9rem;
 }
 
 @media screen and (max-width: 800px){
@@ -181,6 +230,7 @@ body::-webkit-scrollbar-thumb{
         flex-direction: column;
     }
     .about-texto{
+        width: 600px;
         font-size: 0.8rem;
     }
 }
@@ -237,6 +287,7 @@ body::-webkit-scrollbar-thumb{
     .card{
         width: 250px;
         height: 150px;
+        margin-left: -15px;
     }
     .skill-title{
         font-size: 1.2rem;
@@ -258,7 +309,6 @@ body::-webkit-scrollbar-thumb{
     width: 200px;
     height: 350px;
     border-radius: 5px;
-    box-shadow: 7px 7px 13px 0px rgba(40, 40, 40, 0.22);
     transition: all 0.3s ease-out;
 }
 
@@ -270,6 +320,14 @@ body::-webkit-scrollbar-thumb{
 @media screen and (max-width: 800px){
     .projeto{
         align-items: center;
+
+    }
+    .projeto-img img{
+        padding-top: 30px;
+        width: 150px;
+        height: 300px;
+        border-radius: 5px;
+        transition: all 0.3s ease-out;
     }
 }
 
@@ -280,4 +338,67 @@ body::-webkit-scrollbar-thumb{
     align-items: center;
 }
 
+form{
+  width: 300px;
+  height: 400px;
+  padding: 20px 10px;
+  margin: 20px;
+  box-shadow: 2px 3px 9px 1px rgba(0,0, 0, 0.5);
+}
 
+
+label{
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding-left: 10px;
+}
+
+input{
+  display: block;
+  border: 1px solid rgb(44, 51, 156);
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  width: 250px;
+  padding: 5px;
+}
+
+textarea{
+  border: 1px solid rgb(44, 51, 156);
+  border-radius: 5px;
+  resize: none;
+  width: 250px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  height: 100px;
+  padding: 5px;
+}
+
+
+button{
+  border: none;
+    border-radius: 5px;
+    background: linear-gradient(rgb(67, 65, 201), rgb(10, 19, 145));
+    width: 90px;
+    height: 40px;
+    cursor: pointer;
+    color: #fff;
+    margin-left: 10px;
+}
+
+button:hover{
+  background: rgb(36, 53, 148);
+}
+
+
+
+
+
+
+footer{
+    background: #231b8d;
+    padding: 10px;
+    text-align: center;
+    font-weight: 600;
+}
+  
