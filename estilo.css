@@ -270,44 +270,42 @@ a {
 
 /* SKILLS */
 
-.skills-row {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    align-items: center;
-    margin-left: 75px;
-    margin-bottom: 75px;
+.l-cards {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(3, 300px);
+  grid-template-columns: repeat(auto-fit, 300px);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  justify-items: center;
+  padding: 30px;
 }
 
-.card {
-    border-radius: 5px;
-    box-shadow: 7px 7px 13px 0px rgba(40, 40, 40, 0.22);
-    padding: 30px;
-    margin: 20px;
-    width: 300px;
-    transition: all 0.3s ease-out;
-    padding-top: 40px;
+.card-skill{
+  background: rgb(238, 231, 232);
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  padding-top: 30px;
+  border-radius: 5px;
+  transition: all 0.3s ease-out;
+  box-shadow: 3px 2px 9px  rgba(0,0,0,0.5);
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    cursor: pointer;
+.card-skill:hover{
+  transform: translateY(-5px);
+  cursor: pointer;
 }
 
-.skill-title{
-    text-align: center;
-}
-   
-.card p {
-    font-size: 50px;
-    text-align: center;
+
+#card-icone{  
+  font-size: 3rem;
+  padding-top: 10px;
+  color: blue;
 }
 
-.card-icon i{
-    color: #221a97d5;
-}
-
-.blue {
-    border-left: 3px solid #120a7c;
+.card-texto{
+  font-size: 1.3rem;
 }
 
 @media screen and (max-width: 800px){
@@ -405,71 +403,154 @@ a {
 }
 }
 
-
-.contato{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.titulo-contato{
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 8px;
+  background: linear-gradient(to right, rgb(38, 22, 133) 25%, rgb(11, 10, 94) 75%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: -60px;
 }
 
-form{
-  width: 300px;
-  height: 400px;
-  padding: 20px 10px;
-  margin: 20px;
-  box-shadow: 2px 3px 9px 1px rgba(0,0, 0, 0.5);
+.contato {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
-label{
-  font-size: 1.2rem;
-  font-weight: 500;
-  padding-left: 10px;
-}
-
-input{
-  display: block;
-  border: 1px solid rgb(44, 51, 156);
+.form {
+  max-width: 450px;
+  background-color: #fff;
   border-radius: 5px;
-  margin-left: 10px;
-  margin-bottom: 20px;
-  width: 250px;
-  padding: 5px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
-textarea{
-  border: 1px solid rgb(44, 51, 156);
+
+.contato-info {
+  padding: 2.3rem 2.2rem;
+  position: relative;
+}
+
+.contato-info .title {
+  color: #1a23a7;
+}
+
+.contato-text {
+  color: #000;
+  margin: 1.5rem 0 2rem 0;
+  width: 400px;
+}
+
+.informacao p{
+  display: flex;
+  color: #000;
+  margin: 1rem 0;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.icon {
+  width: 28px;
+  margin-right: 0.7rem;
+}
+
+.social-media p{
+  padding-top: 1.5rem;
+}
+
+.social-icons {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  width: 35px;
+  height: 35px;
   border-radius: 5px;
-  resize: none;
-  width: 250px;
-  margin-left: 10px;
-  margin-bottom: 10px;
-  height: 100px;
-  padding: 5px;
+  background: linear-gradient(45deg, #2834d6, #141c92);
+  color: #fff;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 0.5rem;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.05);
+}
+
+.social-icons i{
+  color: #fff;
 }
 
 
-button{
-  border: none;
-    border-radius: 5px;
-    background: linear-gradient(rgb(67, 65, 201), rgb(10, 19, 145));
-    width: 90px;
-    height: 40px;
-    cursor: pointer;
-    color: #fff;
-    margin-left: 10px;
-}
 
-button:hover{
-  background: rgb(36, 53, 148);
-}
+@media (max-width: 850px) {
+  .form {
+    grid-template-columns: 1fr;
+  }
 
-@media screen and (max-width: 800px){
-  .contato-img{
-    display: none;
+  .contato-info:before {
+    bottom: initial;
+    top: -75px;
+    right: 65px;
+    transform: scale(0.95);
+  }
+
+  .contato-form:before {
+    top: -13px;
+    left: initial;
+    right: 70px;
+  }
+
+  .text {
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  .social-media {
+    padding: 1.5rem 0 0 0;
   }
 }
 
+@media (max-width: 480px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .contato-info:before {
+    display: none;
+  }
+
+
+  .text,
+  .information,
+  .social-media p {
+    font-size: 0.8rem;
+  }
+
+  .title {
+    font-size: 1.15rem;
+  }
+
+  .social-icons a {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .icon {
+    width: 23px;
+  }
+
+}
 
 
 footer{
