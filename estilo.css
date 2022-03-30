@@ -282,7 +282,7 @@ a {
 }
 
 .card-skill{
-  background: rgb(238, 231, 232);
+  background: rgb(245, 244, 244);
   width: 150px;
   height: 150px;
   text-align: center;
@@ -301,55 +301,11 @@ a {
 #card-icone{  
   font-size: 3rem;
   padding-top: 10px;
-  color: blue;
+  color: rgba(19, 19, 165, 0.753);
 }
 
 .card-texto{
   font-size: 1.3rem;
-}
-
-@media screen and (max-width: 800px){
-    .skills-row{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-    }
-    .card{
-        width: 250px;
-        height: 150px;
-        margin-left: 15px;
-    }
-    .skill-title{
-        font-size: 1.5rem;
-    }
-    .card p{
-        font-size: 2.2rem;
-    }
-}
-
-@media screen and (max-width: 600px){
-  .skills-row{
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-  }
-  .card{
-    width: 400px;
-    height: 130px;
-  }
-  .skill-title{
-    font-size: 1rem;
-  }
-  .card p{
-    font-size: 2rem;
-  }
-}
-
-@media screen and (max-width: 400px){
-  .card{
-    width: 200px;
-    height: 130px;
-  }
 }
 
 
@@ -493,7 +449,7 @@ a {
 
 
 
-@media (max-width: 850px) {
+@media (max-width: 800px) {
   .form {
     grid-template-columns: 1fr;
   }
@@ -520,7 +476,7 @@ a {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 400px) {
   .container {
     padding: 1.5rem;
   }
