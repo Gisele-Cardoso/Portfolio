@@ -272,7 +272,7 @@ a {
 
 .skills-row {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     align-items: center;
     margin-left: 75px;
     margin-bottom: 75px;
@@ -332,11 +332,11 @@ a {
 @media screen and (max-width: 600px){
   .skills-row{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     align-items: center;
   }
   .card{
-    width: 150px;
+    width: 400px;
     height: 130px;
   }
   .skill-title{
@@ -346,23 +346,14 @@ a {
     font-size: 2rem;
   }
 }
-@media sreen and (max-width: 400px){
-  .skills-row{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-  }
+
+@media screen and (max-width: 400px){
   .card{
-    width: 500px;
-    height: 50px;
-  }
-  .skill-title{
-    font-size: 1rem;
-  }
-  .card p{
-    font-size: 2rem;
+    width: 200px;
+    height: 130px;
   }
 }
+
 
 
 /*PROJETO*/
