@@ -11,7 +11,9 @@
   }
   
   .card-skill{
-    background: #fff;
+    background: #ffffff10;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     width: 150px;
     height: 150px;
     text-align: center;

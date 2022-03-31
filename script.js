@@ -18,15 +18,8 @@ btnMobile.addEventListener('click', toggleMenu);
 btnMobile.addEventListener('touchstart', toggleMenu);
 
 
+
 //scroll
-//window.sr = ScrollReveal({ reset: true})
-
-//sr.reveal('.home-h1', {delay: 500})
-
-/*sr.reveal('.home-img', {
-  rotate: {x:0, y:50, z:0},
-  delay: 2000 
-})*/
 
 const sr = ScrollReveal({
   origin: 'bottom',

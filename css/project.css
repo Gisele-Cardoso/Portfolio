@@ -6,10 +6,10 @@
 
 .projeto-img img{
     padding-top: 30px;
-    width: 200px;
-    height: 350px;
+    width: 400px;
+    height: 250px;
     border-radius: 5px;
-    transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;;
 }
 
 .projeto-img img:hover{
@@ -20,12 +20,13 @@
 @media screen and (max-width: 800px){
     .projeto{
         align-items: center;
+        flex-direction: column;
 
     }
     .projeto-img img{
         padding-top: 30px;
-        width: 150px;
-        height: 300px;
+        width: 400px;
+        height: 250px;
         border-radius: 5px;
         transition: all 0.3s ease-out;
     }
@@ -39,8 +40,8 @@
 }
 .projeto-img img{
     padding-top: 30px;
-    width: 150px;
-    height: 300px;
+    width: 400px;
+    height: 250px;
     border-radius: 5px;
     transition: all 0.3s ease-out;
 }
