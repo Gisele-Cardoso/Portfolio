@@ -18,50 +18,30 @@ btnMobile.addEventListener('click', toggleMenu);
 btnMobile.addEventListener('touchstart', toggleMenu);
 
 
-//form
-const form = document.getElementById("form");
-const result = document.getElementById("result");
+//scroll
+//window.sr = ScrollReveal({ reset: true})
 
-form.addEventListener("submit", function (e) {
-  const formData = new FormData(form);
-  e.preventDefault();
-  var object = {};
-  formData.forEach((value, key) => {
-    object[key] = value;
-  });
-  var json = JSON.stringify(object);
-  result.innerHTML = "Please wait...";
+//sr.reveal('.home-h1', {delay: 500})
 
-  fetch("https://api.web3forms.com/submit", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json"
-    },
-    body: json
-  })
-    .then(async (response) => {
-      let json = await response.json();
-      if (response.status == 200) {
-        result.innerHTML = json.message;
-        result.classList.remove("text-gray-500");
-        result.classList.add("text-green-500");
-      } else {
-        console.log(response);
-        result.innerHTML = json.message;
-        result.classList.remove("text-gray-500");
-        result.classList.add("text-red-500");
-      }
-    })
-    .catch((error) => {
-      console.log(error);
-      result.innerHTML = "Something went wrong!";
-    })
-    .then(function () {
-      form.reset();
-      setTimeout(() => {
-        result.style.display = "none";
-      }, 5000);
-    });
-});
- 
+/*sr.reveal('.home-img', {
+  rotate: {x:0, y:50, z:0},
+  delay: 2000 
+})*/
+
+const sr = ScrollReveal({
+  origin: 'bottom',
+  distance: '80px',
+  duration: 2000,
+  reset: true
+})
+
+sr.reveal('.home-img', {})
+sr.reveal('.home-h1', {})
+sr.reveal('.icones-home', {})
+sr.reveal('button', {})
+sr.reveal('.titulo', {})
+sr.reveal('.about-texto', {})
+sr.reveal('.about-img', {})
+sr.reveal('.l-cards', {})
+sr.reveal('.projeto-img', {})
+sr.reveal('.contato-info', {})

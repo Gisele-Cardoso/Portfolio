@@ -521,4 +521,8 @@ footer{
     width: 100%;
   }
 }
+
+.home-h1, .home-img, .icones-home, button, .titulo, .about-texto, .about-img, .l-cards, .projeto-img, .contato-info{
+  visibility: hidden;
+}
   
