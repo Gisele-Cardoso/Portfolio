@@ -1,0 +1,47 @@
+.projeto{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+
+.projeto-img img{
+    padding-top: 30px;
+    width: 200px;
+    height: 350px;
+    border-radius: 5px;
+    transition: all 0.3s ease-out;
+}
+
+.projeto-img img:hover{
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px){
+    .projeto{
+        align-items: center;
+
+    }
+    .projeto-img img{
+        padding-top: 30px;
+        width: 150px;
+        height: 300px;
+        border-radius: 5px;
+        transition: all 0.3s ease-out;
+    }
+}
+
+@media screen and (max-width: 600px){
+  .projeto{
+    align-items: center;
+    flex-direction: column;
+
+}
+.projeto-img img{
+    padding-top: 30px;
+    width: 150px;
+    height: 300px;
+    border-radius: 5px;
+    transition: all 0.3s ease-out;
+}
+}

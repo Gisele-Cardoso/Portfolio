@@ -1,0 +1,41 @@
+.about{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.about-texto{
+    width: 700px;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width: 800px){
+    .about{
+        flex-direction: column;
+    }
+    .about-texto{
+        width: 600px;
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 600px){
+  .about{
+    flex-direction: column;
+  }
+.about-texto{
+    width: 400px;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 400px){
+  .about-texto{
+    width: 300px;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}

@@ -1,0 +1,150 @@
+.titulo-contato{
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 8px;
+    background: linear-gradient(180deg, #514FBE 0%, #07055E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin-bottom: -60px;
+  }
+  
+  .contato {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .form {
+    max-width: 450px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  
+  .contato-info {
+    padding: 2.3rem 2.2rem;
+    position: relative;
+  }
+  
+  .contato-info .title {
+    color: #1a23a7;
+  }
+  
+  .contato-text {
+    color: #000;
+    margin: 1.5rem 0 2rem 0;
+    width: 400px;
+  }
+  
+  .informacao p{
+    display: flex;
+    color: #000;
+    margin: 1rem 0;
+    align-items: center;
+    font-size: 0.95rem;
+  }
+  
+  .icon {
+    width: 28px;
+    margin-right: 0.7rem;
+  }
+  
+  .social-media p{
+    padding-top: 1.5rem;
+  }
+  
+  .social-icons {
+    display: flex;
+    margin-top: 1rem;
+  }
+  
+  .social-icons a {
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #2834d6, #141c92);
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 0.5rem;
+    transition: 0.3s;
+  }
+  
+  .social-icons a:hover {
+    transform: scale(1.05);
+  }
+  
+  .social-icons i{
+    color: #fff;
+  }
+  
+  
+  
+  @media (max-width: 800px) {
+    .form {
+      grid-template-columns: 1fr;
+    }
+  
+    .contato-info:before {
+      bottom: initial;
+      top: -75px;
+      right: 65px;
+      transform: scale(0.95);
+    }
+  
+    .contato-form:before {
+      top: -13px;
+      left: initial;
+      right: 70px;
+    }
+  
+    .text {
+      margin: 1rem 0 1.5rem 0;
+    }
+  
+    .social-media {
+      padding: 1.5rem 0 0 0;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .container {
+      padding: 1.5rem;
+    }
+  
+    .contato-info:before {
+      display: none;
+    }
+  
+  
+    .text,
+    .information,
+    .social-media p {
+      font-size: 0.8rem;
+    }
+  
+    .title {
+      font-size: 1.15rem;
+    }
+  
+    .social-icons a {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+    }
+  
+    .icon {
+      width: 23px;
+    }
+  
+  }
+  

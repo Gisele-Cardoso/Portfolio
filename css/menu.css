@@ -1,0 +1,113 @@
+#logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Dosis';
+    background: linear-gradient(to right, rgb(30, 15, 119) 25%, rgb(9, 7, 100) 75%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  span{
+      font-family: 'Dosis';
+      color: #2f26a5;
+  }
+  
+  #header {
+    box-sizing: border-box;
+    height: 70px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+  }
+  
+  #menu {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+  }
+  
+  #menu a {
+    font-size: 1rem;
+    display: block;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+
+  #menu a:hover{
+    color: #1916be;
+  }
+  
+  #btn-mobile {
+    display: none;
+  }
+  
+  @media (max-width: 800px) {
+    #menu {
+      display: block;
+      position: absolute;
+      width: 270px;
+      top: 70px;
+      right: 0px;
+      background: rgb(207, 205, 205);
+      transition: 0.6s;
+      z-index: 1000;
+      visibility: hidden;
+      overflow-y: hidden;
+      border-radius: 0px 0px 10px 10px;
+    }
+    #nav.active #menu {
+      height: 300px;
+      visibility: visible;
+      overflow-y: auto;
+    }
+    #menu a {
+      padding: 1rem 0;
+      margin: 0 1rem;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.02);
+      font-family: 'Poppins';
+      font-weight: 500;
+    }
+    #menu a:hover {
+        color: #1916be;
+    }
+    #btn-mobile {
+      display: flex;
+      font-size: 1rem;
+      border: none;
+      background: none;
+      cursor: pointer;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    #hamburger {
+      border-top: 2px solid;
+      width: 20px;
+    }
+    #hamburger::after,
+    #hamburger::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: currentColor;
+      margin-top: 5px;
+      transition: 0.2s;
+      position: relative;
+    }
+    #nav.active #hamburger {
+      border-top-color: transparent;
+    }
+    #nav.active #hamburger::before {
+      transform: rotate(135deg);
+    }
+    #nav.active #hamburger::after {
+      transform: rotate(-135deg);
+      top: -7px;
+    }
+    li:hover::after{
+        display: none;
+    }
+  }
